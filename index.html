@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>儒客</title>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="main">
+    <nav class="navbar" align="center">
+        <div class="container">
+            <div class="navbar-header">儒客</div>
+        </div>
+    </nav>
+    <div class="show_box">
+        <div class="main_container1">
+
+        </div>
+    </div>
+    <div class="show_detail" align="center">
+        <div><img src="images/logo.png"></div>
+    </div>
+    <div class="show_box">
+        <div class="main_container2">
+
+        </div>
+    </div>
+    <div class="show_detail"></div>
+</div>
+<!--<script type="text/javascript" src="https://lib.webfont.com/fastjs.min.js"></script>
+<script type="text/javascript">
+    $webfont.load("body", "2548ea42e57e4a99a6eb4f8f8c197329", "SFJ_xingshut");
+    /*$webfont.load("#id1,.class1,h1", "2548ea42e57e4a99a6eb4f8f8c197329", "SFJ_xingshut");*/
+    $webfont.draw();
+</script>-->
+<script>
+    $(function (){
+        $(".main").addClass("active_main");
+        $(".show_box").css("height",window.screen.height);
+        windowScrollEvent();
+    });
+    function windowScrollEvent() {
+
+        window.onscroll = function () {
+            var a = document.documentElement.scrollTop || document.body.scrollTop;
+            if(a!==0){
+                $(".navbar").css("background-color","rgba(0,0,0,.25)");
+                $(".navbar").css("transition","all .4s ease-in-out");
+                $(".navbar").css("padding-top","0");
+                $(".navbar").css("padding-bottom","10px");
+              /*  $(".navbar").css("height","60px");*/
+
+            }else{
+                $(".navbar").css("padding-bottom","0");
+                $(".navbar").css("padding-top","30px");
+                $(".navbar").css("background-color","transparent");
+                /*$(".navbar").css("height","80px");*/
+            }
+        }
+    }
+</script>
+</body>
+</html>
