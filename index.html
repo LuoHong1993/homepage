@@ -15,41 +15,64 @@
     </nav>
     <div class="show_box">
         <div class="main_container bg1">
-            <div class="famous_row_1" style="position: absolute;top: 100px; right: 100px;">
-                <div class= "famous_cos" style="transition: opacity 4s;">业</div>
-                <div class= "famous_cos"style="transition: opacity 7s;">精</div>
-                <div class= "famous_cos" style="transition: opacity 10s;">于</div>
-                <div class= "famous_cos" style="transition: opacity 13s;">勤</div>
-            </div>
-            <div class="famous_row_2" style="position: absolute;top: 160px; right: 160px;">
-                <div class= "famous_cos" style="transition: opacity 14s;">荒</div>
-                <div class= "famous_cos" style="transition: opacity 16s;">于</div>
-                <div class= "famous_cos" style="transition: opacity 18s;">嘻</div>
-            </div>
+            <ui class="famous_row_1" style="position: absolute;top: 100px; right: 100px;display: none;list-style: none">
+                <li class= "famous_cos">业</li>
+                <li class= "famous_cos">精</li>
+                <li class= "famous_cos">于</li>
+                <li class= "famous_cos">勤</li>
+                <li class= "famous_cos" style="margin-top: 10px">荒</li>
+                <li class= "famous_cos">于</li>
+                <li class= "famous_cos">嘻</li>
+            </ui>
+            <ui class="famous_row_2" style="position: absolute;top: 160px; right: 160px;display: none;list-style: none">
+                <li class= "famous_cos">行</li>
+                <li class= "famous_cos">成</li>
+                <li class= "famous_cos">于</li>
+                <li class= "famous_cos">思</li>
+                <li class= "famous_cos" style="margin-top: 10px">毁</li>
+                <li class= "famous_cos">于</li>
+                <li class= "famous_cos">随</li>
+            </ui>
         </div>
     </div>
-    <div class="show_detail flyswan">
-        <div><img src="images/logo.png"></div>
+    <div class="show_detail">
+        <div><img class="flyswan" src="images/logo.png">
+        </div>
     </div>
-    <div class="show_box">
+    <div class="show_box2">
         <div class="main_container bg2">
 
         </div>
     </div>
-    <div class="show_detail blog">
-        <div><img src="http://blog.ruke.site/images/lh_head.jpg"></div>
+    <div class="show_detail">
+        <div><img class="blog" src="http://blog.ruke.site/images/lh_head.jpg"></div>
+    </div>
+    <div class="show_box3">
+        <div class="main_container bg3">
+            <div class="foot">
+                <div>琼ICP备17003039号-2</div>
+                <div>联系邮箱:luohong_studio@163.com</div>
+            </div>
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="https://lib.webfont.com/fastjs.min.js"></script>
 <script type="text/javascript">
-    $webfont.load(".famous_cos", "f8e84b03a1164b2eba291b618f58c63e", "stfzjjgangbikaishu");
+    $webfont.load(".famous_cos", "7d58f4f168bf4d9c83fff3be00bd0b4e", "stfzjjgangbixingshu");
+    $webfont.load(".navbar-header", "7d58f4f168bf4d9c83fff3be00bd0b4e", "stfzjjgangbixingshu");
     $webfont.draw();
 </script>
 <script>
     $(function (){
         $(".main").addClass("active_main");
-        $(".famous_cos").addClass("active_famous_cos");
+
+        $(".famous_row_1").slideDown(2400);
+        setTimeout(function () {
+            $(".famous_row_2").slideDown(2400);
+        },1200);
         $(".show_box").css("height",window.screen.height);
+        $(".show_box2").css("height",window.screen.height/1.6);
+        $(".show_box3").css("height",window.screen.height/3);
         windowScrollEvent();
     });
     function windowScrollEvent() {
@@ -61,12 +84,14 @@
                 $(".navbar").css("transition","all .4s ease-in-out");
                 $(".navbar").css("padding-top","0");
                 $(".navbar").css("padding-bottom","10px");
+                $(".navbar-header").css("color","#fff");
               /*  $(".navbar").css("height","60px");*/
 
             }else{
                 $(".navbar").css("padding-bottom","0");
                 $(".navbar").css("padding-top","30px");
                 $(".navbar").css("background-color","transparent");
+                $(".navbar-header").css("color","#000");
                 /*$(".navbar").css("height","80px");*/
             }
         }
