@@ -14,29 +14,41 @@
         </div>
     </nav>
     <div class="show_box">
-        <div class="main_container1">
-
+        <div class="main_container bg1">
+            <div class="famous_row_1" style="position: absolute;top: 100px; right: 100px;">
+                <div class= "famous_cos" style="transition: opacity 4s;">业</div>
+                <div class= "famous_cos"style="transition: opacity 7s;">精</div>
+                <div class= "famous_cos" style="transition: opacity 10s;">于</div>
+                <div class= "famous_cos" style="transition: opacity 13s;">勤</div>
+            </div>
+            <div class="famous_row_2" style="position: absolute;top: 160px; right: 160px;">
+                <div class= "famous_cos" style="transition: opacity 14s;">荒</div>
+                <div class= "famous_cos" style="transition: opacity 16s;">于</div>
+                <div class= "famous_cos" style="transition: opacity 18s;">嘻</div>
+            </div>
         </div>
     </div>
-    <div class="show_detail" align="center">
+    <div class="show_detail flyswan">
         <div><img src="images/logo.png"></div>
     </div>
     <div class="show_box">
-        <div class="main_container2">
+        <div class="main_container bg2">
 
         </div>
     </div>
-    <div class="show_detail"></div>
+    <div class="show_detail blog">
+        <div><img src="http://blog.ruke.site/images/lh_head.jpg"></div>
+    </div>
 </div>
-<!--<script type="text/javascript" src="https://lib.webfont.com/fastjs.min.js"></script>
+<script type="text/javascript" src="https://lib.webfont.com/fastjs.min.js"></script>
 <script type="text/javascript">
-    $webfont.load("body", "2548ea42e57e4a99a6eb4f8f8c197329", "SFJ_xingshut");
-    /*$webfont.load("#id1,.class1,h1", "2548ea42e57e4a99a6eb4f8f8c197329", "SFJ_xingshut");*/
+    $webfont.load(".famous_cos", "f8e84b03a1164b2eba291b618f58c63e", "stfzjjgangbikaishu");
     $webfont.draw();
-</script>-->
+</script>
 <script>
     $(function (){
         $(".main").addClass("active_main");
+        $(".famous_cos").addClass("active_famous_cos");
         $(".show_box").css("height",window.screen.height);
         windowScrollEvent();
     });
